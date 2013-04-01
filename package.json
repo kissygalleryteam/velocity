@@ -1,5 +1,28 @@
 {
   "name": "velocity",
   "package": "gallery",
-  "version": "1.1"
+  "version": "1.1",
+  "author": {
+    "name": "hanwen.sah",
+    "email": "hanwen.sah@taobao.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kissygalleryteam/velocity-gallery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shepherdwind/velocity-gallery/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "./1.1/index.js",
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt": "~0.4.1"
+  }
 }

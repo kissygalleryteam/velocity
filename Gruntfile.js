@@ -41,16 +41,26 @@ module.exports = function(grunt) {
       gruntfile: {
         src: 'Gruntfile.js'
       }
+    },
+    copy: {
+      main: {
+        files: [
+          {expand: true, cwd: '<%= pkg.version %>/', src: ['*.js'], dest: '<%=pkg.version %>/build/', filter: 'isFile'}
+        ]
+      }
+    },
+    clean: {
+      build: ["<%= pkg.version %>/*-min.js"]
     }
   });
 
   // These plugins provide necessary tasks.
-  //grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  //grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'uglify']);
+  grunt.registerTask('default', ['uglify', 'copy', 'clean']);
 
 };

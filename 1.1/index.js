@@ -1,6 +1,6 @@
 KISSY.add('gallery/velocity/1.1/index', function(S){
   var Velocity = function(asts){
-    this.testString = "hello world, more and more, end";
+    this.testString = "hello world, more and more and more, end";
     this.asts = asts;
     this.init();
   };

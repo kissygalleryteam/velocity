@@ -14,36 +14,29 @@ module.exports = (grunt)->
           name: '<%= pkg.name %>'
           path: '../'
         ]
-      files: [
-        src: "<%= pkg.version %>/index.js"
-        dest: "<%= pkg.version %>/index.combo.js"
-      ,
-        src: "<%= pkg.version %>/parse.js"
-        dest: "<%= pkg.version %>/parse.combo.js"
-      ]
+        map: [
+          ["<%= pkg.name %>/", "gallery/<%= pkg.name %>/"]
+        ]
+      main:
+        files: [
+          src: "<%= pkg.version %>/index.js"
+          dest: "<%= pkg.version %>/build/index.js"
+        ,
+          src: "<%= pkg.version %>/parse.js"
+          dest: "<%= pkg.version %>/build/parse.js"
+        ]
 
     uglify:
       options:
         banner: '<%= banner %>'
       base:
         files:
-          '<%= pkg.version %>/index-min.js': ['<%= pkg.version %>/index.js']
-          '<%= pkg.version %>/parse-min.js': ['<%= pkg.version %>/parse.js']
-    copy:
-      main:
-        files: [
-          expand: true
-          cwd: '<%= pkg.version %>/'
-          src: ['*.js']
-          dest: '<%=pkg.version %>/build/'
-          filter: 'isFile'
-        ]
-    clean:
-      build: ["<%= pkg.version %>/*-min.js"]
+          '<%= pkg.version %>/build/index-min.js': ['<%= pkg.version %>/build/index.js']
+          '<%= pkg.version %>/build/parse-min.js': ['<%= pkg.version %>/build/parse.js']
 
   grunt.loadNpmTasks('grunt-contrib-clean')
-  grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-copy')
+  grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-kmc')
 
-  grunt.registerTask 'default', ['uglify', 'copy', 'clean']
+  grunt.registerTask 'default', ['kmc', 'uglify']

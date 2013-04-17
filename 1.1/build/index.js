@@ -1,4 +1,10 @@
-KISSY.add('gallery/velocity/1.1/index', function(S){
+/*
+combined files : 
+
+gallery/velocity/1.1/index
+
+*/
+KISSY.add('gallery/velocity/1.1/index',function(S){
   var Velocity = function(asts){
     this.testString = "hello world, more and more and more, end";
     this.asts = asts;
@@ -958,3 +964,4 @@ KISSY.add('gallery/velocity/1.1/index', function(S){
 
   return Velocity;
 });
+

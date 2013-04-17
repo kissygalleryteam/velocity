@@ -1,4 +1,10 @@
-KISSY.add('gallery/velocity/1.1/parse', function(S){    /* Jison generated parser */
+/*
+combined files : 
+
+gallery/velocity/1.1/parse
+
+*/
+KISSY.add('gallery/velocity/1.1/parse',function(S){    /* Jison generated parser */
 var velocity = (function(){
 var parser = {trace: function trace() { },
 yy: {},
@@ -725,3 +731,4 @@ if (typeof module !== 'undefined' && require.main === module) {
   exports.main(typeof process !== 'undefined' ? process.argv.slice(1) : require("system").args);
 }
 }    return velocity;  });  
+

@@ -1,5 +1,6 @@
 KISSY.add(function(S){
   var Velocity = function(asts){
+    this.test = 'haha';
     this.asts = asts;
     this.init();
   };

@@ -214,10 +214,8 @@ $.fn.ready(function(){
   });
 
   // attempt: fill from URL, get localStorage, or load defaults; then render
-  if (!tmpltr.fn.getFromUrl()) {
-    if (!tmpltr.fn.getLocal()) {
-      tmpltr.fn.getDefaults();
-    }
+  if (!tmpltr.fn.getLocal()) {
+    tmpltr.fn.getDefaults();
   }
   //tmpltr.fn.renderOutput();
 

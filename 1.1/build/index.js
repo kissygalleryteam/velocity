@@ -6,7 +6,7 @@ gallery/velocity/1.1/index
 */
 KISSY.add('gallery/velocity/1.1/index',function(S){
   var Velocity = function(asts){
-    this.test = 'merge test 1.2.2';
+    this.test = 'merge test 1.2.1';
     this.asts = asts;
     this.init();
   };

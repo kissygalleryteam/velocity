@@ -1,6 +1,6 @@
 KISSY.add(function(S){
   var Velocity = function(asts){
-    this.test = 'merge test 1.1';
+    this.test = 'merge test 1.2.2';
     this.asts = asts;
     this.init();
   };

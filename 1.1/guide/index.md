@@ -12,6 +12,7 @@ velocityjs在npm中包名从原来的`velocity.js`改为`velocityjs`，感觉`re
 
 ```bash
 $ npm info velocityjs version
+$ npm info velocityjs version
 ```
 
 velocity.js是velocity模板语法的javascript实现。
